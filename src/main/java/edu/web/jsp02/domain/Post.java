@@ -10,7 +10,7 @@ public class Post {
     private String content; // 글 내용
     private String author; // 작성자
     private LocalDateTime createdTime; // 최초 작성 시간
-    private LocalDateTime modifiedTime; // 최종 수정 시간
+    private LocalDateTime modifiedTime; // 최종 수정 시간.
     
     public Post() {}
 
