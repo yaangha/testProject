@@ -1,0 +1,104 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>edu.web</groupId>
+    <artifactId>jsp02</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
+    <name>MVC Project</name>
+    <description>Servlet/JSP MVC Project</description>
+
+    <!-- 라이브러리 의존성 추가 -->
+    <dependencies>
+        <!-- JavaEE 라이브러리(Servlet/JSP 사용하기 위한 라이브러리) -->
+        <!-- Servlet/JSP, JSP 표준 액션 태그, EL -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+
+        <!-- JSTL -->
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+        
+        <!-- JUnit Test -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.9.1</version>
+            <scope>test</scope> 
+        </dependency>
+        
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.9.1</version>
+        </dependency> 
+        
+        <!-- Oracle JDBC -->
+        <dependency>
+            <groupId>com.oracle.database.jdbc</groupId>
+            <artifactId>ojdbc8</artifactId>
+            <version>21.7.0.0</version>
+        </dependency>
+        
+        <!-- HikariCP (Connection Pool): DBCP DataSource를 사용하기 위해서 -->
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>5.0.1</version>
+        </dependency>
+        
+        <!-- Log4j2 logging -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.19.0</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.19.0</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>2.19.0</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.36</version>
+        </dependency>
+        
+        <!-- Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <release>17</release>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.3</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
